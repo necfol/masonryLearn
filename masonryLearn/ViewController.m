@@ -7,6 +7,7 @@
 //
 
 #import "ViewController.h"
+#import "Masonry.h"
 
 @interface ViewController ()
 
@@ -16,7 +17,14 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    // Do any additional setup after loading the view, typically from a nib.
+    UIView *view = [[UIView alloc] init];
+    view.backgroundColor = [UIColor orangeColor];
+    [self.view addSubview:view];
+    [view mas_makeConstraints:^(MASConstraintMaker *make) {
+        make.center.equalTo(self.view);
+        make.size.mas_equalTo(CGSizeMake(300, 300));
+    }];
+    
 }
 
 
