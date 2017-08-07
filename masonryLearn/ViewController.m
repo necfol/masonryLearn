@@ -20,8 +20,11 @@
     UIView *view = [[UIView alloc] init];
     view.backgroundColor = [UIColor orangeColor];
     [self.view addSubview:view];
+//    创建约束
     [view mas_makeConstraints:^(MASConstraintMaker *make) {
+//        位置约束
         make.center.equalTo(self.view);
+//        尺寸约束
         make.size.mas_equalTo(CGSizeMake(300, 300));
     }];
     
