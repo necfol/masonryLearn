@@ -22,10 +22,14 @@
     [self.view addSubview:view];
 //    创建约束
     [view mas_makeConstraints:^(MASConstraintMaker *make) {
-//        位置约束
-        make.center.equalTo(self.view);
-//        尺寸约束
-        make.size.mas_equalTo(CGSizeMake(300, 300));
+////        位置约束
+//        make.center.equalTo(self.view);
+////        尺寸约束
+//        make.size.mas_equalTo(CGSizeMake(300, 300));
+//        make.width.height.mas_equalTo(100);
+//        make.size.equalTo([NSValue valueWithCGSize:CGSizeMake(100, 100)]);
+        make.size.mas_equalTo(self.view).multipliedBy(0.5);
+        make.right.bottom.equalTo(self.view).offset(-20);
     }];
     
 }
