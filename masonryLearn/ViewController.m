@@ -28,8 +28,13 @@
 //        make.size.mas_equalTo(CGSizeMake(300, 300));
 //        make.width.height.mas_equalTo(100);
 //        make.size.equalTo([NSValue valueWithCGSize:CGSizeMake(100, 100)]);
-        make.size.mas_equalTo(self.view).multipliedBy(0.5);
-        make.right.bottom.equalTo(self.view).offset(-20);
+//        make.size.mas_equalTo(self.view).multipliedBy(0.5);
+//        make.right.bottom.equalTo(self.view).offset(-20);
+//        make.right.equalTo(self.view).offset(-50);
+//        make.left.equalTo(self.view).offset(50);
+//        make.top.equalTo(self.view).offset(50);
+//        make.bottom.equalTo(self.view).offset(-50);
+        make.edges.equalTo(self.view).insets(UIEdgeInsetsMake(50, 50, 50, 50));
     }];
     
 }
